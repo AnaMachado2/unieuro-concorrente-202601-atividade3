@@ -1,4 +1,9 @@
 # Relatório de Desempenho: Avaliador de Logs Paralelo
+Disciplina: Programação Concorrente e Distribuida
+Aluno(s):Ana Júlia de Almeida Machado
+Turma: ADS 5° Semestre 
+Professor: Rafael
+Data: 20/03/2026
 
 Este projeto apresenta a evolução de um sistema de análise de logs de uma execução serial para uma arquitetura paralela, utilizando o modelo **Produtor-Consumidor** com buffer limitado. A solução foi desenvolvida em Python para otimizar o processamento de grandes volumes de dados operacionais.
 
@@ -55,13 +60,28 @@ As métricas foram calculadas com base nas fórmulas:
 | **8** | 18.83 | 6.15 | 0.76 |
 | **12** | 16.23 | 7.14 | 0.59 |
 
-## 7. Análise dos Resultados
+## 7. Gráfico de Execução
+
+![Gráfico Tempo Execução](graficos/TEMPO.png)
+
+
+## 8. Gráfico de Speedup
+
+![Gráfico de Speedup](graficos/SPEEDUP3.png)
+
+
+## 9. Gráfico de Eficiência
+
+![Gráfico de Eficiência](graficos/EFICIÊNCIA3.png)
+
+
+## 10. Análise dos Resultados
 
 * **Escalabilidade:** A aplicação apresentou excelente escalabilidade até 4 processos, mantendo eficiência próxima de 1.0.
 * **Ponto de Queda de Eficiência:** A eficiência caiu significativamente ao ultrapassar 8 processos (de 0.76 para 0.59). Isso ocorre porque o número de processos (12) excedeu o número de núcleos físicos da máquina.
 * **Overhead e Gargalos:** Houve overhead na comunicação entre processos e na disputa pelo acesso ao disco (I/O). A velocidade de leitura do sistema de arquivos é o principal limitador em altas contagens de paralelismo.
 
-## 8. Conclusão
+## 11. Conclusão
 
 O paralelismo trouxe um ganho de desempenho substancial, reduzindo o tempo de processamento em aproximadamente **86%**. O melhor equilíbrio entre tempo e recursos foi observado com **4 processos**. A implementação escala bem, sendo limitada apenas pelos limites físicos de hardware (núcleos e I/O).
 
