@@ -1,18 +1,17 @@
 # Relatório de Experimento: Paralelização de Avaliador de Logs
 
-[cite_start]**Estudante:** Ana Júlia de Almeida Machado [cite: 1]
-[cite_start]**Instituição:** Centro Universitário Unieuro [cite: 1]
-[cite_start]**Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas [cite: 1]
-
+**Estudante:** Ana Júlia de Almeida Machado 
+**Instituição:** Centro Universitário Unieuro 
+**Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas 
 ---
 
 ## 1. Descrição do Problema
 
-* [cite_start]**Objetivo do programa:** O programa visa processar grandes volumes de arquivos de log para extrair métricas consolidadas (contagem de linhas, palavras, caracteres e termos específicos como "erro", "warning" e "info")[cite: 1].
-* [cite_start]**Volume de dados:** Foram processados **1.000 arquivos**, totalizando **10.000.000 de linhas** de log[cite: 1].
-* [cite_start]**Algoritmo utilizado:** Foi implementado o modelo **Produtor-Consumidor** com buffer limitado (fila de tarefas)[cite: 1]. [cite_start]Um processo produtor mapeia os arquivos e os coloca em uma `JoinableQueue`, enquanto processos consumidores competem para processar cada arquivo[cite: 1].
-* [cite_start]**Complexidade aproximada:** O algoritmo possui complexidade linear $O(n \times m)$, onde $n$ é o número de arquivos e $m$ o número de linhas por arquivo, uma vez que cada linha é lida e decomposta uma única vez[cite: 1].
-* [cite_start]**Objetivo da paralelização:** Reduzir o tempo de resposta do sistema, que originalmente operava de forma serial, aproveitando a arquitetura multi-core da CPU para processar múltiplos arquivos simultaneamente[cite: 1].
+* **Objetivo do programa:** O programa visa processar grandes volumes de arquivos de log para extrair métricas consolidadas (contagem de linhas, palavras, caracteres e termos específicos como "erro", "warning" e "info").
+* **Volume de dados:** Foram processados **1.000 arquivos**, totalizando **10.000.000 de linhas** de log.
+* **Algoritmo utilizado:** Foi implementado o modelo **Produtor-Consumidor** com buffer limitado (fila de tarefas). Um processo produtor mapeia os arquivos e os coloca em uma `JoinableQueue`, enquanto processos consumidores competem para processar cada arquivo.
+* **Complexidade aproximada:** O algoritmo possui complexidade linear $O(n \times m)$, onde $n$ é o número de arquivos e $m$ o número de linhas por arquivo, uma vez que cada linha é lida e decomposta uma única vez.
+* **Objetivo da paralelização:** Reduzir o tempo de resposta do sistema, que originalmente operava de forma serial, aproveitando a arquitetura multi-core da CPU para processar múltiplos arquivos simultaneamente.
 
 ---
 
