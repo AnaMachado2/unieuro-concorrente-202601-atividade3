@@ -1,9 +1,3 @@
-Com certeza, Ana Júlia. Removi as citações de suporte e os marcadores de imagem para que o relatório fique limpo e pronto para ser usado como o seu `README.md` oficial.
-
-Aqui está a versão final em Markdown:
-
----
-
 # Relatório de Desempenho: Avaliador de Logs Paralelo
 
 Este projeto apresenta a evolução de um sistema de análise de logs de uma execução serial para uma arquitetura paralela, utilizando o modelo **Produtor-Consumidor** com buffer limitado. A solução foi desenvolvida em Python para otimizar o processamento de grandes volumes de dados operacionais.
